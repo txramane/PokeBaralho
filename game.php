@@ -9,28 +9,16 @@ class Carta
     {
         return $this->numero;
     }
-
-    /**
-     * Set the value of numero
-     */
     public function setNumero(int $numero): self
     {
         $this->numero = $numero;
 
         return $this;
     }
-
-    /**
-     * Get the value of nome
-     */
     public function getNome(): string
     {
         return $this->nome;
     }
-
-    /**
-     * Set the value of nome
-     */
     public function setNome(string $nome): self
     {
         $this->nome = $nome;
@@ -97,16 +85,18 @@ foreach ($pokeBaralho as $carta) {
 
 echo "\n";
 $acertou = false;
-$palpite = 0;
+$pontos = 0;
+
 while(! $acertou) {
-    $palpite++;
+    echo "\n";
     $num = readline("TENTE ADIVINHAR A CARTA:  ");
 
     if ($num == $cartaSorteada->getNumero()) {
         echo "VOCÊ ACERTOU! PARABÉNS!\n";
         $acertou = true;
+        $pontos++;
     } else {
         echo "VOCÊ ERROU! TENTE NOVAMENTE :C\n";
     }
+echo "VOCÊ ESTÁ COM " . $pontos . " PONTOS\n";
 }
-
