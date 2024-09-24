@@ -88,7 +88,7 @@ $acertou = false;
 $pontos = 0;
 
 while(! $acertou) {
-    echo "\n";
+    echo "- - - - - POKE GUESSER - - - - -\n";
     $num = readline("TENTE ADIVINHAR A CARTA:  ");
 
     if ($num == $cartaSorteada->getNumero()) {
