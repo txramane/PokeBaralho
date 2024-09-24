@@ -94,7 +94,7 @@ while(! $acertou) {
     if ($num == $cartaSorteada->getNumero()) {
         echo "VOCÊ ACERTOU! PARABÉNS!\n";
         $acertou = true;
-        $pontos++;
+        $pontos+10;
     } else {
         echo "VOCÊ ERROU! TENTE NOVAMENTE :C\n";
     }
